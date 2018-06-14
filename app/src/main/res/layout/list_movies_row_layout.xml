@@ -1,0 +1,80 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    card_view:cardCornerRadius="0dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+        <!--Thumbnail Image-->
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/placeholder"
+            android:layout_marginRight="10dp"/>
+
+
+        <!-- Movie Title -->
+        <TextView
+            android:id="@+id/movie_title_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/movie_list_title"
+            android:textStyle="bold"
+            tools:text="A Viagem de Arlo"
+            android:layout_toRightOf="@+id/thumbnail"/>
+
+        <!-- Movie Original Title -->
+        <TextView
+            android:id="@+id/title_original"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/movie_list_title_original"
+            tools:text="A Viagem de Arlo"
+            android:layout_below="@+id/movie_title_details"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:textStyle="italic"/>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/movie_list_rating"
+            tools:text="Pontuação: 6.08"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/title_original"
+            android:layout_alignLeft="@+id/title_original"
+            android:layout_alignStart="@+id/title_original"/>
+
+
+        <!-- Release Year -->
+        <TextView
+            android:id="@+id/release_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:textColor="@color/year"
+            android:textSize="@dimen/movie_list_year"
+            tools:text="2015-11-01"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:gravity="bottom"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
